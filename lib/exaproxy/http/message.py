@@ -166,33 +166,3 @@ class HTTP (object):
 			res = self.raw
 
 		return res
-
-
-#if __name__ == '__main__':
-#	class Conf (object):
-#		class Proxy (object):
-#			name = 'proxy'
-#			version = '1'
-#		proxy = Proxy()
-#		class Http (object):
-#			x_forwarded_for = True
-#		http = Http()
-#	conf = Conf()
-#
-#	r = """\
-#GET http://thomas.mangin.com/ HTTP/1.1
-#Host: thomas.mangin.com
-#User-Agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10.7; rv:9.0.1) Gecko/20100101 Firefox/9.0.1
-#Accept: text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8
-#Accept-Language: en-us,en;q=0.5
-#Accept-Encoding: gzip, deflate
-#Accept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7
-#Proxy-Connection: keep-alive
-#Cookie: txtMainTab=Timeline
-#
-#"""
-#	h = Header(conf,r,'127.0.0.1')
-#	if h.parse():
-#		print "[%s]" % h
-#	else:
-#		print 'parsing failed'
